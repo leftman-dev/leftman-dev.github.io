@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+  </head>
+  <style>
+    * {
+      font-family: src, Consolas, verdana;
+      margin: 0;
+      padding: 0;
+      outline: none;
+      border: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      font-size: 1.2rem;
+    }
+    @font-face {
+      font-family: src;
+      src: url(fuentes/SourceSansPro-Light.ttf);
+    }
+    ::selection {
+      background: #321;
+      color: orange;
+    }
+    div {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+    }
+    .fonda {
+      width: 40%;
+      height: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: center;
+    }
+    .fondo {
+      width: 60%;
+      height: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: flex-end;
+      background-image: url(3q.svg);
+      background-position: center center;
+      background-size: 80% 80%;
+      background-repeat: no-repeat;
+    }
+    main {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-content: flex-end;
+      background: linear-gradient(
+        to top,
+        rgba(36, 37, 36, 0.541),
+        rgba(167, 35, 167, 0.459)
+      );
+    }
+    .fondo h1,
+    span {
+      color: rgb(71, 65, 65);
+      font-size: 2.6rem;
+      text-align: center;
+    }
+    form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-content: center;
+      transition: 0.2s ease-in;
+      background: rgb(90, 88, 90);
+    }
+    input[type="text"],
+    input[type="password"] {
+      padding: 5px 15px;
+
+      width: 70%;
+      height: 45px;
+      border: 1px solid gray;
+      transition: 0.2s ease-in;
+    }
+    input[type="submit"] {
+      width: 70%;
+      height: 45px;
+
+      font-weight: bold;
+    }
+    .ena {
+      display: none;
+    }
+    .si {
+      display: block;
+      background: rgba(36, 35, 35, 0.103);
+      border: 1px solid white;
+      color: white;
+      border-radius: 10px;
+    }
+    .si:hover {
+      background: white;
+      color: rgb(136, 66, 136);
+    }
+    .na {
+      box-shadow: 3px 3px 5px gray;
+      background: linear-gradient(
+        to bottom,
+        rgb(136, 66, 136),
+        rgb(121, 116, 118)
+      );
+    }
+    .borda {
+      border-radius: 15px;
+    }
+
+    @media screen and (max-width: 800px) {
+      .fondo,
+      .fonda {
+        width: 100%;
+        height: 50%;
+      }
+      div {
+        height: 800px;
+        flex-flow: column wrap;
+      }
+    }
+    span {
+      color: rgb(123, 37, 131);
+    }
+  </style>
+  <link rel="stylesheet" type="text/css" href="style1.css" />
+  <body>
+    <div id="forma">
+      <header class="fondo">
+        <main>
+          <h1>
+            Registrate en la comunidad de developers más grande de
+            <span>Hispanoamérica!!.</span>
+          </h1>
+        </main>
+      </header>
+      <header class="fonda">
+        <form action="#" method="post" id="si" onclick="da()">
+          <input
+            type="text"
+            placeholder=" username"
+            id="borde"
+            autocomplete="sex"
+          />
+          <br />
+          <input type="password" placeholder="clave" id="borda" />
+          <br />
+          <input
+            type="submit"
+            value="enviar"
+            class="ena"
+            id="ena"
+            onclick="saludar()"
+          />
+        </form>
+      </header>
+    </div>
+
+    <script>
+      function da() {
+        let btn = document.getElementById("ena");
+        btn.classList.add("si");
+        let btna = document.getElementById("si");
+        btna.classList.add("na");
+
+        let bord = document.getElementById("borde");
+        bord.classList.add("borda");
+        let borda = document.getElementById("borda");
+        borda.classList.add("borda");
+      }
+
+      function saludar() {
+        alert("Gracias por registrarte!!");
+      }
+    </script>
+  </body>
+</html>
